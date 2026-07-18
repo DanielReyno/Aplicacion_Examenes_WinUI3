@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Page x:ConnectionId='1'
+    x:Class="TestsApplication.Views.AddSectionPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:TestsApplication.Views"
+    xmlns:models="using:TestsApplication.Models"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Page.Resources>
+        <!-- Use the Estudiante type so x:Bind Nombre works -->
+        <DataTemplate x:ConnectionId='2' x:Name="StudentDataTemplate"                               >
+            <StackPanel x:ConnectionId='6'>
+                <TextBlock x:ConnectionId='7'                       />
+            </StackPanel>
+        </DataTemplate>
+
+        <DataTemplate x:ConnectionId='3' x:Name="TestDataTemplate"                      >
+            <StackPanel x:ConnectionId='4'>
+                <TextBlock x:ConnectionId='5'                           />
+            </StackPanel>
+        </DataTemplate>
+
+    </Page.Resources>
+
+    <StackPanel Width="500" VerticalAlignment="Center">
+        <!-- Named so code-behind can read the section name -->
+        <TextBox x:ConnectionId='8' x:Name="SectionNameTextBox" Header="Nombre de la seccion" FontSize="20"/>
+        <!-- Named so code-behind can access SelectedItems -->
+        <ListView x:ConnectionId='9' x:Name="StudentsListView" Header="Agregar estudiantes"                                    ItemTemplate="{StaticResource StudentDataTemplate}" SelectionMode="Multiple" Margin="0 10"/>
+        <StackPanel HorizontalAlignment="Center" Visibility="Collapsed">
+            <FontIcon Glyph="&#xF180;" FontSize="70"/>
+            <TextBlock Text="Listado vacio, Agregue nuevos estudiantes"/>
+        </StackPanel>
+        <ListView x:ConnectionId='10' x:Name="ExamsListView" Header="Agregar Examenes"                                 ItemTemplate="{StaticResource TestDataTemplate}" SelectionMode="Multiple" Margin="0 10"/>
+        <StackPanel HorizontalAlignment="Center" Visibility="Collapsed">
+            <FontIcon Glyph="&#xF180;" FontSize="70"/>
+            <TextBlock Text="Listado vacio, Agregue nuevos examenes"/>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+            <Button x:ConnectionId='11' Content="Cancelar" Style="{StaticResource SubtleButtonStyle}"                           />
+            <Button x:ConnectionId='12' Content="Crear" Style="{StaticResource AccentButtonStyle}"                           />
+        </StackPanel>
+    </StackPanel>
+</Page>
+

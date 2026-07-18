@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Page
+    x:Class="TestsApplication.Views.AddStudentPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:TestsApplication.Views"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <StackPanel Width="500" VerticalAlignment="Center">
+        <TextBox x:Name="NombreTextBox" Header="Nombre" FontSize="20"/>
+        <TextBox x:Name="ApellidoTextBox" Header="Apellido" FontSize="20"/>
+        <StackPanel HorizontalAlignment="Right" Orientation="Horizontal" Margin="0 10 0 0">
+            <Button x:Name="CreateButton" Style="{ThemeResource AccentButtonStyle}" Content="Crear" Click="CreateButton_Click"/>
+            <Button x:Name="CancelButton" Style="{ThemeResource SubtleButtonStyle}" Content="Cancelar" Click="CancelButton_Click"/>
+        </StackPanel>
+    </StackPanel>
+</Page>

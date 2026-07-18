@@ -1,0 +1,2 @@
+C:\Users\Daniel\Desktop\releases\TestsApplication.pdb
+C:\Users\Daniel\Desktop\releases\TestsApplication.exe

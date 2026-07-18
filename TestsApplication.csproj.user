@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <DebuggerFlavor>ProjectDebugger</DebuggerFlavor>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ActiveDebugProfile>TestsApplication (Unpackaged)</ActiveDebugProfile>
+    <_LastSelectedProfileId>C:\Users\Daniel\source\repos\TestsApplication\Properties\PublishProfiles\win-arm64.pubxml</_LastSelectedProfileId>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Update="App.xaml">
+      <SubType>Designer</SubType>
+    </None>
+    <None Update="MainWindow.xaml">
+      <SubType>Designer</SubType>
+    </None>
+    <None Update="Package.appxmanifest">
+      <SubType>Designer</SubType>
+    </None>
+    <Page Update="Views\AddStudentPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\StudentListPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\AddSectionPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\SectionListPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Custom Templates\ShowFreeAnswerQuestionTemplate.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Custom Templates\ShowMultipleChoiceQuestionTemplate.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Custom Templates\ShowTrueOrFalseQuestionTemplate.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Custom Templates\ShowExistingQuestionsTemplate.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Custom Templates\SuggestedInfoWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\TestListPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\NewTestPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\HomeMenuPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+</Project>

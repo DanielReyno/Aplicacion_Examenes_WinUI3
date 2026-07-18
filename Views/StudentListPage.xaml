@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Page
+    x:Class="TestsApplication.Views.StudentListPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:models="using:TestsApplication.Models"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Page.Resources>
+        <DataTemplate x:Name="StudentsDataTemplate" x:DataType="models:Estudiante">
+            <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                <Ellipse x:Name="Ellipse"
+                    Grid.RowSpan="2"
+                    Width ="32"
+                    Height="32"
+                    Margin="6"
+                    VerticalAlignment="Center"
+                    HorizontalAlignment="Center"
+                    Fill="{ThemeResource SystemControlBackgroundBaseMediumBrush}"/>
+
+                <TextBlock Text="{x:Bind Nombre}" VerticalAlignment="Center"/>
+            </StackPanel>
+        </DataTemplate>
+    </Page.Resources>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <CommandBar DefaultLabelPosition="Right">
+            <AppBarButton Label="Añadir estudiante" Icon="Add" Click="AddNewStudentButton_Click"/>
+            <AppBarButton Label="Exportar excel" Icon="Share" IsEnabled="False"/>
+            <AppBarButton Label="Importar excel" Icon="Upload" IsEnabled="False"/>
+            <CommandBar.Content>
+                <TextBlock Text="Estudiantes" Margin="16,8" Style="{ThemeResource SubtitleTextBlockStyle}"/>
+            </CommandBar.Content>
+        </CommandBar>
+
+        <ListView ItemsSource="{x:Bind Estudiantes}" ItemTemplate="{StaticResource StudentsDataTemplate}" Grid.Row="1" Padding="16"/>
+    </Grid>
+</Page>

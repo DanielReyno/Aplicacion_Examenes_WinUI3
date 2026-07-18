@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<UserControl
+    x:Class="TestsApplication.Views.Custom_Templates.SuggestedInfoWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:TestsApplication.Views.Custom_Templates"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <UserControl.Resources>
+        <DataTemplate x:Key="ContactListViewTemplate" x:DataType="x:String">
+            <StackPanel Margin="0,5,0,5">
+                <TextBlock Text="{x:Bind ToString()}"/>
+                <TextBlock Text="Subtitulo" FontSize="10" Margin="5,0,0,0" Foreground="{StaticResource TextFillColorDisabledBrush}"/>
+            </StackPanel>
+        </DataTemplate>
+    </UserControl.Resources>
+
+
+    <ScrollView Padding="5" BorderBrush="{ThemeResource TextFillColorDisabledBrush}" BorderThickness="1" Margin="0,3,0,0">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+
+            </Grid.RowDefinitions>
+            <TextBlock FontSize="20" Text="{x:Bind WindowsName}"/>
+            <ListView IsEnabled="False" SelectionMode="{x:Bind SelectionMode}" ItemsSource="{x:Bind TestingNames}" Grid.Row="1" x:Name="ListView1" ItemTemplate="{StaticResource ContactListViewTemplate}"  Width="350" Height="Auto" HorizontalAlignment="Left"/>
+
+
+
+
+            
+            <StackPanel x:Name="EmptyListLayout" Grid.Row="1" VerticalAlignment="Center">
+                <FontIcon Margin="10" Glyph="&#xE713;" FontSize="70" />
+                <TextBlock Text="No hay preguntas, Crea una!" TextAlignment="Center"/>
+            </StackPanel>
+            
+            
+        </Grid>
+    </ScrollView>
+</UserControl>

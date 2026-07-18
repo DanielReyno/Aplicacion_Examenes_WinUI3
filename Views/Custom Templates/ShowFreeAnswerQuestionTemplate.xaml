@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<UserControl
+    x:Class="TestsApplication.Views.Custom_Templates.ShowFreeAnswerQuestionTemplate"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:TestsApplication.Views.Custom_Templates"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <StackPanel>
+        <RichEditBox x:Name="RichEditBoxContent" Header="Pregunta #n" PlaceholderText="Insertar Texto" Height="100" AutomationProperties.Name="Insertar"/>
+        <TextBox x:Name="TextBoxContent" Header="Escriba su respuesta" PlaceholderText="Introducir texto"/>
+        <StackPanel Margin="0,20,0,0" Orientation="Horizontal" HorizontalAlignment="Right">
+            <Button Width="100" Content="Cancelar" Style="{StaticResource SubtleButtonStyle}" Click="CancelExamQuestion"/>
+            <Button Width="100" Content="Crear" Style="{StaticResource AccentButtonStyle}" Click="CreateQuestion_Button"/>
+        </StackPanel>
+    </StackPanel>
+</UserControl>

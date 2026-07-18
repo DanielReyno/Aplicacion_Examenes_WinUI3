@@ -1,0 +1,14 @@
+App.xbf
+MainWindow.xbf
+Views\AddSectionPage.xbf
+Views\AddStudentPage.xbf
+Views\Custom Templates\ShowExistingQuestionsTemplate.xbf
+Views\Custom Templates\ShowFreeAnswerQuestionTemplate.xbf
+Views\Custom Templates\ShowMultipleChoiceQuestionTemplate.xbf
+Views\Custom Templates\ShowTrueOrFalseQuestionTemplate.xbf
+Views\Custom Templates\SuggestedInfoWindow.xbf
+Views\HomeMenuPage.xbf
+Views\NewTestPage.xbf
+Views\SectionListPage.xbf
+Views\StudentListPage.xbf
+Views\TestListPage.xbf
